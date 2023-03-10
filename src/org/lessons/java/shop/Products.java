@@ -13,7 +13,7 @@ public class Products {
     public Products(String name, String description, double price, int iva){
         Random random = new Random();
         int randomNumber = random.nextInt(9999999);
-        code = String.format("%08d", randomNumber);
+        code = String.format("%07d", randomNumber);
         this.name = name;
         this.description = description;
         this.price = price;
