@@ -3,7 +3,7 @@ package org.lessons.java.shop;
 import java.util.Random;
 
 public class Products {
-    private String code;
+    private int code;
     private String name;
     private String description;
     private double price;
@@ -12,8 +12,7 @@ public class Products {
     //Constructor
     public Products(String name, String description, double price, int iva){
         Random random = new Random();
-        int randomNumber = random.nextInt(9999999);
-        code = String.format("%07d", randomNumber);
+        code  = random.nextInt(9999999);
         this.name = name;
         this.description = description;
         this.price = price;
@@ -22,7 +21,7 @@ public class Products {
 
     //Getter
     public String getCode(){
-        return code;
+        return String.format("%07d", code);
     }
 
     public String getName(){
